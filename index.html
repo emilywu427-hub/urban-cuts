@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Barber | Premium Haircuts</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+    }
+
+    header {
+      background: #080808;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: bold;
+      color: #d6aa60;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #d6aa60;
+    }
+
+    .hero {
+      min-height: 600px;
+      padding: 100px 8%;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, #111 15%, #111b 55%, #0005),
+        url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero p:first-child {
+      color: #d6aa60;
+      letter-spacing: 4px;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 85px);
+      margin: 20px 0;
+      line-height: 1.05;
+    }
+
+    h1 span {
+      color: #d6aa60;
+    }
+
+    .description {
+      color: #ccc;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 25px;
+      background: #d6aa60;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #d6aa60;
+    }
+
+    .button:hover {
+      background: transparent;
+      color: #d6aa60;
+    }
+
+    section {
+      padding: 75px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title p {
+      color: #d6aa60;
+      letter-spacing: 3px;
+      font-size: 12px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-top: 12px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      background: #1b1b1b;
+      padding: 30px;
+      border: 1px solid #333;
+    }
+
+    .service:hover {
+      border-color: #d6aa60;
+    }
+
+    .service h3 {
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .service p {
+      color: #aaa;
+      line-height: 1.7;
+    }
+
+    .price {
+      color: #d6aa60;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .about {
+      background: #191919;
+      text-align: center;
+    }
+
+    .about p {
+      color: #bbb;
+      max-width: 650px;
+      margin: 20px auto 30px;
+      line-height: 1.8;
+    }
+
+    .booking {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      background: #1b1b1b;
+      border: 1px solid #444;
+      color: white;
+      font-size: 15px;
+    }
+
+    form button {
+      padding: 15px;
+      background: #d6aa60;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    #message {
+      color: #d6aa60;
+      text-align: center;
+    }
+
+    footer {
+      background: #080808;
+      text-align: center;
+      padding: 28px;
+      color: #aaa;
+      border-top: 1px solid #333;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0;
+      }
+
+      .hero {
+        min-height: 500px;
+        padding: 70px 6%;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">URBAN BARBER.</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#booking">Booking</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p>STYLE • PRECISION • CONFIDENCE</p>
+        <h1>OWN YOUR<br><span>STYLE.</span></h1>
+        <p class="description">
+          Welcome to Urban Barber. Get fresh fades, sharp cuts
+          and professional grooming in a modern atmosphere.
+          Your look, your rules.
+        </p>
+        <a href="#booking" class="button">BOOK YOUR CUT ↗</a>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-title">
+        <p>WHAT WE OFFER</p>
+        <h2>OUR SERVICES</h2>
+      </div>
+
+      <div class="services">
+        <div class="service">
+          <h3>Classic Haircut</h3>
+          <p>A clean, timeless haircut tailored to your style.</p>
+          <div class="price">€20</div>
+        </div>
+
+        <div class="service">
+          <h3>Skin Fade</h3>
+          <p>A smooth fade with sharp edges and a fresh finish.</p>
+          <div class="price">€25</div>
+        </div>
+
+        <div class="service">
+          <h3>Beard Trim</h3>
+          <p>Professional beard shaping and detailed grooming.</p>
+          <div class="price">€12</div>
+        </div>
+
+        <div class="service">
+          <h3>Haircut + Beard</h3>
+          <p>The complete package for a sharp, confident look.</p>
+          <div class="price">€32</div>
+        </div>
+
+        <div class="service">
+          <h3>Buzz Cut</h3>
+          <p>A simple, fresh and low-maintenance haircut.</p>
+          <div class="price">€15</div>
+        </div>
+
+        <div class="service">
+          <h3>Kids' Haircut</h3>
+          <p>Fresh cuts for our younger customers.</p>
+          <div class="price">€15</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-title">
+        <p>THE URBAN EXPERIENCE</p>
+        <h2>MORE THAN A HAIRCUT</h2>
+      </div>
+
+      <p>
+        At Urban Barber, we combine modern styles with traditional
+        barbering skills. Every customer deserves attention,
+        precision and a haircut that brings out their confidence.
+      </p>
+
+      <a href="#booking" class="button">VISIT US</a>
+    </section>
+
+    <section id="booking">
+      <div class="section-title">
+        <p>YOUR NEXT FRESH CUT</p>
+        <h2>BOOK AN APPOINTMENT</h2>
+      </div>
+
+      <div class="booking">
+        <form id="bookingForm">
+          <input type="text" name="name"
+            placeholder="Your full name" required>
+
+          <input type="tel" name="phone"
+            placeholder="Your phone number" required>
+
+          <select name="service" required>
+            <option value="">Choose your service</option>
+            <option>Classic Haircut - €20</option>
+            <option>Skin Fade - €25</option>
+            <option>Beard Trim - €12</option>
+            <option>Haircut + Beard - €32</option>
+            <option>Buzz Cut - €15</option>
+            <option>Kids' Haircut - €15</option>
+          </select>
+
+          <input type="date" name="date" id="date" required>
+
+          <input type="time" name="time" required>
+
+          <textarea name="notes" rows="4"
+            placeholder="Additional notes (optional)"></textarea>
+
+          <button type="submit">REQUEST A BOOKING</button>
+          <p id="message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo">URBAN BARBER.</div>
+    <p style="margin-top: 12px">
+      © <span id="year"></span> Urban Barber. All rights reserved.
+    </p>
+    <p style="margin-top: 8px">Stay sharp. Stay original.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    const dateInput = document.getElementById("date");
+    const today = new Date();
+    dateInput.min = new Date(
+      today.getTime() - today.getTimezoneOffset() * 60000
+    ).toISOString().split("T")[0];
+
+    document.getElementById("bookingForm").addEventListener(
+      "submit", function(event) {
+        event.preventDefault();
+
+        document.getElementById("message").textContent =
+          "Thank you! This is a demo form. Please contact the barber to confirm your booking.";
+      }
+    );
+  </script>
+
+</body>
+</html>
